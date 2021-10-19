@@ -11,6 +11,9 @@ aiofiles, append new data to current json data
 loaded via async load(), then json.dumps the new data.
 """
 
+# RFB (reason for bit):
+#  https://stackoverflow.com/questions/66522303/should-i-use-json-dumps-with-write-function-or-json-dump-in-python#comment119418412_66522414
+
 
 async def load(filename):
     """Async load from JSON file"""
