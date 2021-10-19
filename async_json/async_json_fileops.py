@@ -9,6 +9,11 @@ Writing to JSON via 'dump' is a syncronous (blocking) action.
 Cheap Async fix for this is to generate file pointer via
 aiofiles, append new data to current json data
 loaded via async load(), then json.dumps the new data.
+
+Downside:
+ - Load() to get JSON data is mandatory
+ - Cannot directly run write() without having data from in file
+ - 2 function calls for write, 1 for load (overall)
 """
 
 # RFB (reason for bit):
