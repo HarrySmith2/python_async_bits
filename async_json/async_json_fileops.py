@@ -7,8 +7,8 @@ from aiofiles import open
 __doc__ = """
 Writing to JSON via 'dump' is a syncronous (blocking) action.
 Cheap Async fix for this is to generate file pointer via
-aiofiles, append new data to json data via async_load
-then json.dumps the new data.
+aiofiles, append new data to current json data
+loaded via async load(), then json.dumps the new data.
 """
 
 
